@@ -31,10 +31,25 @@ public class Deck {
 		Collections.shuffle(deck);
 	}
 	
-	public Card dealCard(){
-		Card card = deck.remove(0);
-		return card;
+	//these methods will help 'deal' a card object 
+
+	public Card draw() {
+		return deck.remove(0);
 	}
+	
+	public List<Card> getCard() {
+		return deck;
+	}
+	
+	public void addCard(Card addCard) {
+		this.deck.add(addCard);
+	}
+
+	@Override
+	public String toString() {
+		return "Deck [deck=" + deck + "]";
+	}
+	
 	
 	
 }
